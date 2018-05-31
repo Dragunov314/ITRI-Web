@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Status</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src = "weather.js"></script>
+<style>
+body {
+    background: url("/asset/skies_of_blue_by_naturedrop.jpg");
+}
+
+#current-icon {
+    width: 5vw;
+    height: 5vw;
+    border: none;
+    border-radius: 3vw;
+    padding: 30px;
+    display: flex;
+    margin-left: 50%;
+    margin-top: 3%;
+}
+
+#temperature-icon {
+    width: 20px;
+    height: 23px;
+}
+
+#current-temperature {
+    width: 165px;
+}
+
+
+#current-weather-details {
+    margin-left: 35%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    width: 40vw;
+    height: 25vh;
+    padding: 10px;
+    border-radius: 10px;    
+    justify-content: center;
+    align-content: space-around;
+    flex-wrap: wrap;
+    background-color: hsla(216, 100%, 60%, 0.8);
+	line-height: 3vw;
+	text-align: center;
+}
+
+a {
+    width: 20vw;
+    font-size: 2vw;
+    text-align: center;
+    color: #FFFFFF;
+    font-family: 'Fresca', sans-serif;
+    letter-spacing: 0.2px;
+    cursor: default;
+}
+
+#current-temperature {
+    cursor: pointer;
+}
+
+#weather-summary {
+    width: 40vw;
+    height: 5vh;
+    margin-left: 35%;
+    margin-top: 2%;
+    border-radius: 10px;
+    font-family: 'Fresca', sans-serif;
+    font-size: 1.5vw;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    line-height: 2vh;
+    opacity: 0.8;
+}
+</style>
+
+
+
+</head>
+<body>
+	
+    <img id="current-icon">
+        <div id="current-weather-details">
+             <a id="current-humidity">--</a><br/>
+             <a id="current-pressure">--</a><br/>
+             <a id="current-uvIndex">--</a><br/>
+             <!img id="temperature-icon">
+             <a id="current-temperature">--</a><br/>
+             <a id="current-wind-bearing">--</a><br/>
+             <a id="current-wind-speed">--</a><br/>         
+        </div>
+        <p id="weather-summary"></p>
+    
+</body>
+</html>

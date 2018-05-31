@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The XMLHttpRequest Object</h2>
+
+<button type="button" onclick="loadDoc()">Request data</button>
+
+<p id="demo"></p>
+ 
+<script>
+var jsonData;
+		function loadData() {
+		  var start = new Date().getTime();
+		  var xhttp = new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+			  jsonData = DataJSON.parse(this.responseText);
+			  var end = new Date().getTime();
+			  console.log('milliseconds passed', end - start);
+			}
+		  };
+		  xhttp.open("POST", "000013.txt", true);
+		  xhttp.send();
+		}
+</script>
+
+</body>
+</html>
